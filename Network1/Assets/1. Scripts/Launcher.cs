@@ -76,7 +76,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnLeftRoom()
     {
-        lobbyCanvasManager.VisibleOnly("Menu");
+        lobbyCanvasManager.VisibleOnly("Main");
     }
 
 
