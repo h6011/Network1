@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
 
             jump();
 
-            mainCanvasManager.SetTestTitle($"{((int)rb.velocity.x)}, {((int)rb.velocity.y)}, {((int)rb.velocity.z)}");
+            //mainCanvasManager.SetTestTitle($"{((int)rb.velocity.x)}, {((int)rb.velocity.y)}, {((int)rb.velocity.z)}");
 
         }
 
