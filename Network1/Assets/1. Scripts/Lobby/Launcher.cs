@@ -57,6 +57,12 @@ public class Launcher : MonoBehaviourPunCallbacks
         lobbyCanvasManager.currentRoomNameText.text = PhotonNetwork.CurrentRoom.Name;
         //lobbyCanvasManager.setCurrentRoomNameText(PhotonNetwork.CurrentLobby.Name);
 
+        int count = lobbyCanvasManager.playerListContent.childCount;
+        for (int i = 0; i < count; i++)
+        {
+            Destroy(lobbyCanvasManager.playerListContent.GetChild(i).gameObject);
+        }
+
         addAllPlayerListItemPrefab();
 
         lobbyCanvasManager.startGameBtn.gameObject.SetActive(PhotonNetwork.IsMasterClient);
@@ -84,6 +90,8 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public override void OnRoomListUpdate(List<RoomInfo> roomList)
     {
+
+
         Debug.LogWarning("OnRoomListUpdate");
 
         int roomListCount = roomList.Count;
